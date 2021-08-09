@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Olá Mundo - React Profissional</title>
+    </head>
+
+    <style>
+        .subtitle {
+            color: red;
+        }
+
+    </style>
+
+    <body>
+        <div id="root"></div>
+        <div id="root2"></div>
+
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script>
+            let e = React.createElement;
+            ReactDOM.render(
+                e("h1", null, "Hello World!",
+                    e("br"),
+                    e("h2", { className: "subtitle" }, "Hello World!"),
+                ),
+
+                document.getElementById("root")
+            );
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(
+                <h1>
+                    Hello World
+                    <br />
+                    <h2 className="subtitle">Hello World!</h2>
+                </h1>,
+                document.getElementById("root2")
+            )
+        </script>
+    </body>
+
+</html>
